@@ -1,0 +1,48 @@
+$primary_solor: rgb(233, 72, 107);
+$secondary_color: dodgerblue;
+.toggle-tab-wrapper {
+    padding: unset;
+    margin: unset;
+    position: relative;
+    li {
+        display: inline-flex;
+        padding: 10px;
+        cursor: pointer;
+        color: #666565;
+        text-transform: capitalize;
+        &:hover {
+            &.primary {
+                border-bottom: 3px solid $primary_solor;
+                color: #303030;
+                font-weight: 500;
+            }
+            &.secondary {
+                padding-bottom: 15px;
+                color: #303030;
+                font-weight: 500;
+                border-bottom: 3px solid $secondary_color;
+            }
+        }
+        &.active {
+            &.primary {
+                color: #303030;
+                font-weight: 500;
+                border-bottom: 3px solid $primary_solor;
+            }
+            &.secondary {
+                padding-bottom: 15px;
+                font-weight: 500;
+                color: #303030;
+                border-bottom: 3px solid $secondary_color;
+            }
+        }
+    }
+    hr {
+        bottom: -1px;
+        margin: unset;
+        position: absolute;
+        width: 100%;
+        z-index: -1;
+        border-color: #ffffff73;
+    }
+}

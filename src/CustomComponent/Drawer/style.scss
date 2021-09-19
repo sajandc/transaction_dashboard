@@ -1,0 +1,35 @@
+.drawer-wrapper {
+    position: fixed;
+    z-index: 9999;
+    top: 0;
+    .drawer {
+        top: 0;
+        right: 0;
+        height: 100%;
+        z-index: 1200;
+        position: fixed;
+        overflow-y: auto;
+        display: flex;
+        box-shadow: -3px 0px 4px -4px grey;
+        transition: transform 0.2s ease-in;
+        transform: translateX(100%);
+        background-color: #fff;
+        &.drawer-open {
+            transform: translateX(0);
+        }
+    }
+}
+.backdrop {
+    top: 0;
+    left: 15%;
+    right: 0;
+    bottom: 0;
+    display: flex;
+    z-index: -1;
+    opacity: 1;
+    position: fixed;
+    align-items: center;
+    justify-content: center;
+    background-color: rgba(0, 0, 0, 0.59);
+    -webkit-tap-highlight-color: transparent;
+}
